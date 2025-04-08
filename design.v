@@ -1,9 +1,12 @@
+//code for design
+`timescale 1ns/1ps
+
 module room_security (
     input clock, clear, 
     input [3:0] password_input,  // 4-bit password input
     input enter,                 // Enter button for password submission
-    output reg door_lock,         // 1 = Locked, 0 = Unlocked
-    output reg alarm              // 1 = Alarm ON (wrong attempts)
+    output reg door_lock,        // 1 = Locked, 0 = Unlocked
+    output reg alarm             // 1 = Alarm ON (wrong attempts)
 );
 
   parameter CORRECT_PASSWORD = 4'b1010;  // Set predefined password
